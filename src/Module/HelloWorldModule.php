@@ -42,6 +42,6 @@ class HelloWorldModule extends \Module
 
     $message = $messageGenerator->sayHelloTo('World');
 
-    $this->Template->message = 'Hello World';
+    $this->Template->message = $message;
   }
 }
