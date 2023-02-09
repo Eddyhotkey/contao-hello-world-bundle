@@ -2,6 +2,8 @@
 
 namespace Eddyhotkey\ContaoHelloWorldBundle\Module;
 
+use Eddyhotkey\ContaoHelloWorldBundle\Library\MessageGenerator;
+
 class HelloWorldModule extends \Module
 {
   /**
@@ -36,6 +38,10 @@ class HelloWorldModule extends \Module
    */
   protected function compile()
   {
+    $messageGenerator = \Contao\System::getContainer()->get(MessageGenerator::class);
+
+    $message = $messageGenerator->sayHelloTo('World');
+
     $this->Template->message = 'Hello World';
   }
 }

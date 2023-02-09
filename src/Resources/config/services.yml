@@ -1,3 +1,5 @@
 services:
+    Eddyhotkey\ContaoHelloWorldBundle\Library\MessageGenerator:
+        public: true
     _defaults:
         autoconfigure: true
